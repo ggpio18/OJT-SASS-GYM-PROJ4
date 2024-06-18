@@ -1,0 +1,252 @@
+@use '../abstract/' as *;
+@use '../base/' as *;
+@use '../component/' as *;
+@use '../layout/' as *;
+@use '../vendor/' as *;
+
+ body{
+    background-color: $clr-primary;
+ }
+ .round-1{
+    @include  roundedContainer();
+.banner{
+    &__wrapper{
+        margin-bottom: 5rem;
+        @include grid(1fr 1fr);
+        h4{
+            font-family: "cd-regular";
+            opacity: .5;
+        }
+        h1{
+            font-family: "cd-medium";
+            font-weight: bolder;
+        }
+        .button__side{
+            @include flex(flex-end, flex-end);
+            bottom: 5rem;
+        button{
+            font-size: 1.5rem;
+            border: none;
+            min-width: 13rem;
+            padding: 1rem;
+            border: none;
+            border-radius: 5rem;
+            text-transform: uppercase;
+            background: $clr-accent;
+            color: $clr-light;
+        }
+        .btn{
+            border: 2px solid $clr-accent;
+            border-color: $clr-accent;
+            background: $clr-light;
+            color: $clr-dark;
+        }
+    }
+    .image__side{
+        @include mediaQuery{
+        @include unevenGrid(1fr 1fr);
+        }
+        // @include grid(1fr, 1fr)
+        margin-bottom: 5rem;
+        .image__p__top{
+            p{
+                text-wrap: wrap;
+                text-align: justify;
+            }
+        }
+    }
+    }
+}
+ }
+
+//  counter sect
+ .round-2{
+    @include  roundedContainer($clr-secondary);
+.counter{
+   &__wrapper{
+    @include mediaQuery{
+    @include unevenGrid(1fr 1fr 2fr 1fr);
+    gap: 10rem;
+    }
+    .counter__info{
+        text-align: center;
+        h1{
+            color: $clr-light;
+        }
+        h5{
+            color: $clr-light;
+        }
+        p{
+            color: $clr-light;
+        }
+    }
+   }
+}
+ }
+
+ //SERVICE
+.service{
+        .title{
+        text-align: center;
+        h2{
+            font-size: 5rem;
+            color: $clr-light;
+            font-weight: bolder;
+        }
+        h4{
+            color: $clr-light;
+        }
+    }
+.round-3{
+        @include  roundedContainer($clr-secondary);
+        .service__wrapper{
+            .service__list{
+                @include mediaQuery{
+                   
+                    @include unevenGrid(1fr 1fr 1fr);
+                    gap: 10rem;
+                    }
+                    .service__1{
+                    .service__info{
+                        @include flex(space-between, baseline);
+                        margin-top: 3rem;
+                        
+                        i{
+                            color: $clr-accent;
+                        }
+                        .service__p{
+                            top: 10rem;
+                            color: $clr-light;
+                        }
+                        h2, p{
+                            color: $clr-light;
+                        }
+                        
+                    }
+                }
+                .service__info__img{
+                    img{
+                        border-radius: 5rem;
+                        height: 42rem;
+                    }
+                }
+            }
+        }
+    }
+    }
+
+ //meet the team
+.team{
+    &__wrapper{
+        @include mediaQuery{
+            @include unevenGrid(1fr);
+        }
+        .title{
+            text-align: center;
+            h2{
+                font-size: 5rem;
+                color: $clr-light;
+                font-weight: bolder;
+            }
+            h4{
+                color: $clr-light;
+            }
+        }
+        .card{
+            @include mediaQuery{
+                @include unevenGrid(1fr 1fr 1fr);
+                gap: 5rem;
+                
+            }
+            gap: 5rem;
+            .card-info{
+                opacity: 10;
+                padding: .1px;
+                border-radius: 1rem;
+                background-color: #595a4f;
+                img{
+                    border-radius: 1rem;
+                }
+            }
+        }
+    }
+}
+
+// TESTIMONIAL
+.round-4{
+    @include  roundedContainer($clr-secondary);
+    .testimonial{
+        padding: 10rem 0;
+        &__wrapper{
+            @include mediaQuery{
+                @include unevenGrid(1fr 1fr);
+            }
+            .testimonial__left{
+                h4{
+                    color: $clr-light;
+                    opacity: .5;
+                }
+                h2{
+                    color: $clr-light;
+                    font-size: 5rem;
+                }
+                ul{
+                    @include flex;
+                    gap: 1rem;
+                    li{
+                        color: $clr-accent;
+                        font-size: 3rem;
+                    }
+                }
+            }
+            .testimonial__right{
+                p{
+                    color: $clr-light;
+                    margin-top: 3rem;
+                }
+                .author{ 
+                    @include unevenGrid(1fr 55rem);
+                    img{
+                        border-radius: 5rem;
+                    }
+                    .author__info{
+                        line-height: 1;
+                        h4{
+                            color: $clr-light;
+                        }
+                        h5{
+                            color: $clr-light;
+                        }
+                    }
+                }
+        }
+        }
+    }
+}
+//subscribe
+.cta{
+    background-image: url(https://via.placeholder.com/400x200);
+    background-repeat: no-repeat;
+    background-size: cover;
+    &__wrapper{
+        text-align: center;
+        h2{
+            font-weight: bolder;
+            color: $clr-light;
+        }
+        p{
+            color: $clr-light;
+        }
+        button{
+            font-size: 1.5rem;
+            border: none;
+            min-width: 13rem;
+            padding: 1rem;
+            border: none;
+            border-radius: 5rem;
+            text-transform: uppercase;
+            background: $clr-accent;
+            color: $clr-light;
+        }
+    }
+}
